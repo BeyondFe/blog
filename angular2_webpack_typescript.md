@@ -1,5 +1,5 @@
 title: Angular2 With Typescript And Webpack
-date: 2016-01-18
+date: 2016-01-19
 ---
 
 I'm just starting to get into [angular2](https://www.npmjs.com/package/angular2) with [TypeScript](https://www.npmjs.com/package/typescript). I decided to give the [angular2 quickstart application](https://angular.io/docs/ts/latest/quickstart.html) a try. At first glance I wanted to use [webpack](https://www.npmjs.com/package/webpack) instead of [systemjs](https://www.npmjs.com/package/systemjs) for module loading.
@@ -33,8 +33,7 @@ To begin here is my package.json file:
 }
 ```
 
-I have [typescript](https://www.npmjs.com/package/typescript) and [tsd](https://www.npmjs.com/package/tsd) installed globally, ```npm install typescript tsd -g``` but included them in the devDependencies section just in case some people don't want to install those globally. You can run ```tsd init``` then ```tsd query angular2 --action install``` to have angular2 TypeScript definition files.
-
+I have [typescript](https://www.npmjs.com/package/typescript) and [tsd](https://www.npmjs.com/package/tsd) installed globally **npm install typescript tsd -g** but included them in the devDependencies section just in case some people don't want to install those globally. You can run **tsd init** then **tsd query angular2 --action install** to have angular2 TypeScript definition files.
 
 I included [webpack](https://www.npmjs.com/package/webpack) and [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server). There are two [npm scripts](https://docs.npmjs.com/misc/scripts), build and start, that use webpack and webpack-dev-server respectively.
 
@@ -112,8 +111,10 @@ The [TypeScript Wiki](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json
 
 One of the options you should note is on line 6 that will generate source maps. Ok here we go with the source maps again. One of the neat things with this setup is that [source maps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) will be generated. They help when debugging JavaScript with chrome devtools.
 
-After running ```npm run build``` then ```npm run start``` goto ```http://localhost:8080``` in a browser (I use chrome). Once the page is loaded open devtools and click on the ```Sources``` tab. Drill down on the list item labeled ```webpack``` on the left-side. You'll notice there are the original typescript files! Click on one and check for yourself. You can set breakpoints and start digging in! Here is what your screen should look like:
+After running **npm run build** then **npm run start** goto ```http://localhost:8080``` in a browser (I use chrome). Once the page is loaded open devtools and click on the **Sources** tab. Drill down on the list item labeled **webpack** on the left-side. You'll notice there are the original typescript files! Click on one and check for yourself. You can set breakpoints and start digging in! Here is what your screen should look like:
 
-![alt text](https://raw.githubusercontent.com/schempy/angular2-typescript-webpack-starter/master/images/angular2-typescript-webpack-source-maps.png)
+![alt text](https://raw.githubusercontent.com/schempy/angular2-typescript-webpack/master/images/angular2-typescript-webpack-source-maps.png)
 
 This is a good starting point for me. From here I can start developing an application.
+
+Full source code for this example [angular2-typescript-webpack](https://github.com/schempy/angular2-typescript-webpack)
