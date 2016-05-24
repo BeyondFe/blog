@@ -5,35 +5,50 @@ date: 2016-01-19
 I'm just starting to get into [angular2](https://www.npmjs.com/package/angular2) with [TypeScript](https://www.npmjs.com/package/typescript). I decided to give the [angular2 quickstart application](https://angular.io/docs/ts/latest/quickstart.html) a try. At first glance I wanted to use [webpack](https://www.npmjs.com/package/webpack) instead of [systemjs](https://www.npmjs.com/package/systemjs) for module loading.
 
 To begin here is my package.json file:
-```js
+```json
 {
   "name": "angular2-typescript-webpack",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.2.0",
   "scripts": {
+    "postinstall": "typings install",
     "build": "webpack",
     "start": "webpack-dev-server"
   },
-  "license": "ISC",
-  "devDependencies": {
-    "ts-loader": "^0.7.2",
-    "tsd": "^0.6.5",
-    "typescript": "^1.7.5",
-    "webpack": "^1.12.11",
-    "webpack-dev-server": "^1.14.1"
-  },
   "dependencies": {
-    "angular2": "^2.0.0-beta.1",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.13",
-    "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.0",
-    "zone.js": "^0.5.10"
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.12"
+  },
+  "devDependencies": {
+    "ts-loader": "0.8.2",
+    "typescript": "1.8.10",
+    "typings": "0.7.12",
+    "webpack": "1.13.0",
+    "webpack-dev-server": "1.14.1"
   }
 }
 ```
 
-I have [typescript](https://www.npmjs.com/package/typescript) and [tsd](https://www.npmjs.com/package/tsd) installed globally **npm install typescript tsd -g** but included them in the devDependencies section just in case some people don't want to install those globally. You can run **tsd init** then **tsd query angular2 --action install** to have angular2 TypeScript definition files.
+I have [typescript](https://www.npmjs.com/package/typescript) and [typings](https://www.npmjs.com/package/typings) installed globally **npm install typescript typings -g** but included them in the devDependencies section just in case some people don't want to install those globally.
+
+You'll need a file named typings.json to install a es6-shim
+
+```json
+{
+  "ambientDependencies": {
+    "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd"
+  }
+}
+```
+
+You can now run **typings install**
 
 I included [webpack](https://www.npmjs.com/package/webpack) and [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server). There are two [npm scripts](https://docs.npmjs.com/misc/scripts), build and start, that use webpack and webpack-dev-server respectively.
 
@@ -93,14 +108,9 @@ Here is the tsconfig.json file
     "noImplicitAny": false
   },
   "exclude": [
-    "node_modules"
-  ],
-  "files": [
-    "typings/angular2/angular2.d.ts",
-    "typings/tsd.d.ts",
-    "app/app.component.ts",
-    "app/boot.ts",
-    "app/vendor.ts"
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
   ],
   "compileOnSave": false,
   "buildOnSave": false,
@@ -118,3 +128,5 @@ After running **npm run build** then **npm run start** goto ```http://localhost:
 This is a good starting point for me. From here I can start developing an application.
 
 Full source code for this example [angular2-typescript-webpack](https://github.com/schempy/angular2-typescript-webpack)
+
+Thanks to [dachibro](https://github.com/dachibro) and [H-e-r-m](https://github.com/hermanfransen) for their contributions to the github repository!
