@@ -15,13 +15,13 @@ To begin here is my package.json file:
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.1",
-    "@angular/compiler": "2.0.0-rc.1",
-    "@angular/core": "2.0.0-rc.1",
-    "@angular/http": "2.0.0-rc.1",
-    "@angular/platform-browser": "2.0.0-rc.1",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
-    "@angular/router-deprecated": "2.0.0-rc.1",
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/router-deprecated": "2.0.0-rc.2",
     "reflect-metadata": "0.1.3",
     "rxjs": "5.0.0-beta.6",
     "zone.js": "0.6.12"
@@ -29,7 +29,7 @@ To begin here is my package.json file:
   "devDependencies": {
     "ts-loader": "0.8.2",
     "typescript": "1.8.10",
-    "typings": "0.7.12",
+    "typings": "1.3.0",
     "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1"
   }
@@ -42,7 +42,7 @@ You'll need a file named typings.json to install a es6-shim
 
 ```json
 {
-  "ambientDependencies": {
+  "globalDependencies": {
     "es6-shim": "github:DefinitelyTyped/DefinitelyTyped/es6-shim/es6-shim.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd"
   }
 }

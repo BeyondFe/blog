@@ -1,3 +1,7 @@
+title: Where To Have API Calls In React Flux
+date: 2015-03-02
+---
+
 Working with React/Flux the last three months I couldn't decide where to make asynchronous calls. Should they be made in the component, store or action creators? I chose the action creators since dispatching of all actions come from them. A module could abstract the actual asynchronous call and return a promise.  The promise would resolve with the result of the call or be rejected if there was an error.
 
 Here's an example of the module to make the asynchronous call. I used [superagent](https://github.com/visionmedia/superagent) to make the request.

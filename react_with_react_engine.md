@@ -1,3 +1,7 @@
+title: React With react-engine
+date: 2015-06-04
+---
+
 Previously I wrote an article about [rendering react server side with seo](http://schempy.com/2015/02/16/reactjs_flux_and_routing_for_seo/). It was an experiment that worked but needed improvement. Lately I've been using [react-engine](https://github.com/paypal/react-engine) to render react views client and server side. It's a rendering engine for [express](https://github.com/strongloop/express) that uses [react-router](https://github.com/rackt/react-router).
 
 I wanted to use the same react components in my previous example and modify as little as possible.

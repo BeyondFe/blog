@@ -1,3 +1,7 @@
+title: React Flux and Routing For Seo
+date: 2015-02-16
+---
+
 Single page web applications are awesome. Recently I used React/Flux to build a simple application to test if I can get SEO working without being a real pain. The application would display products based on a category. The user would select a category from a drop-down. Once a category has been selected a list of products in that category would display.
 
 I wanted to have a client-side router. I chose [react-router](https://github.com/rackt/react-router). Selecting a category would push a url to the browser history. The user would be able to refresh the browser with the new url and have the contents of the page be SEO friendly.
@@ -24,6 +28,8 @@ The initial state passed from the server would be JSON stored in a javascript va
 	window.App={"products:[{"id": 1, "name":"Led Zeppelin"},{"id": 2, "name":"Bob Marley"}]};
 </script>
 ```
+
+<!-- more -->
 
 I used the [serializer-javascript](https://github.com/yahoo/serialize-javascript) module to create the JSON on the server.
 

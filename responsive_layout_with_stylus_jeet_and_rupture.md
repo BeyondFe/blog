@@ -1,3 +1,7 @@
+title: Responsive Layouts With Stylus Jeet And Rupture
+date: 2015-04-03
+---
+
 Develop for mobile first is a common theme you hear today. I use three libraries for preprocessing css to help with this process. They make it easy to get a responsive site running fairly quick.
 
 1. [Stylus](https://github.com/stylus/stylus) - CSS pre-processor.

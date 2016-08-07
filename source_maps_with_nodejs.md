@@ -1,3 +1,7 @@
+title: Source Maps With Node.js
+date: 2015-05-20
+---
+
 Using source maps when generating ES5 code from ES6 has proved to be very helpful in my development. When debugging I want errors to reference the source files not the generated files. I use [babel](https://github.com/babel/babel) to generate ES5 code from ES6 and source-map files. I also use [source-map-support](https://github.com/evanw/node-source-map-support) for referencing stack traces in the source file.
 
 For this example I'll create a simple ES6 class that extends EventEmitter and will emit a success event. I'll purposely misspell the word emit and check if the error references the source file.

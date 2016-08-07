@@ -1,3 +1,7 @@
+title: Async Tasks With ES6 Generators
+date: 2015-03-24
+---
+
 ES6 generators seem to be a very good fit for handling asynchronous actions. I've been using a library, [generator-runner](https://www.npmjs.com/package/generator-runner), which uses ES6 generators for running async tasks. To use the library you create a runner that takes two parameters:
 
 1. **A generator function**. Within this function you **yield** to a async task. The async task is invoked with a callback to continue the generator (calling next). The callback returns the value for the yield expression. The runner then takes the value for yield expression and returns it.

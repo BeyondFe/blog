@@ -1,3 +1,7 @@
+title: Streaming File Uploads With Node.js
+date: 2015-03-11
+---
+
 I've been experimenting with Node.js to build a http server for handling POST requests. Particularly for uploading files. I would send a multipart-form/data POST request containing one or more files. The route handler would parse and stream any file to a destination. That destination could be a directory on the server or a storage service like Amazon S3.
 
 I used [routes](https://www.npmjs.com/package/routes) for handling routing and [busboy](https://www.npmjs.com/package/busboy) for parsing HTML form data. Busyboy is a perfect module for this application. It emits a **file** event for incoming files and a **field** event for each non-file field. If a file is found Busboy will emit a **data** event when streaming and an **end** event when the streaming is complete.
