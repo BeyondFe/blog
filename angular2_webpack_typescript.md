@@ -1,5 +1,6 @@
 title: Angular2 With Typescript And Webpack
 date: 2016-01-19
+updated: 2016-09-17
 ---
 
 I'm just starting to get into [angular2](https://www.npmjs.com/package/angular2) with [TypeScript](https://www.npmjs.com/package/typescript). I decided to give the [angular2 quickstart application](https://angular.io/docs/ts/latest/quickstart.html) a try. At first glance I wanted to use [webpack](https://www.npmjs.com/package/webpack) instead of [systemjs](https://www.npmjs.com/package/systemjs) for module loading.
@@ -8,23 +9,24 @@ To begin here is my package.json file:
 ```json
 {
   "name": "angular2-typescript-webpack",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "scripts": {
     "postinstall": "typings install",
     "build": "webpack",
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "@angular/common": "2.0.0-rc.4",
-    "@angular/compiler": "2.0.0-rc.4",
-    "@angular/core": "2.0.0-rc.4",
-    "@angular/http": "2.0.0-rc.4",
-    "@angular/platform-browser": "2.0.0-rc.4",
-    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-    "@angular/router-deprecated": "2.0.0-rc.2",
-    "reflect-metadata": "0.1.3",
-    "rxjs": "5.0.0-beta.6",
-    "zone.js": "0.6.12"
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "@angular/router": "3.0.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.23"
   },
   "devDependencies": {
     "ts-loader": "0.8.2",
