@@ -36,6 +36,7 @@ All tests are in ``test/unit`` directory and end in ``.spec.js``. For this examp
 
 #### Step 1
 Adding a [jest configuration](https://facebook.github.io/jest/docs/configuration.html#content) to the ``package.json`` file. If you want to use this method there must be a ``jest`` key in the JSON file.
+test
 If not you can [set the configuration on the command line](https://facebook.github.io/jest/docs/cli.html#content).
 ```json
 "jest": {
@@ -77,7 +78,7 @@ Modify ``.babelrc`` to use ES6 features within the test files.
 ```
 
 #### Step 3
-Create a setup file for Jest. This will allow me to use Aurelia in the tests.
+Create a setup file for Jest. This will allow me to use Aurelia in the tests. The setup file is located in ``test/jest-pretest.js``. This file can be named anything you'd like. Configure jest to use this setup file in the configuration under ``setupFiles.js``, line 14 Step 1.
 ```javascript
 import 'aurelia-polyfills';
 import {Options} from 'aurelia-loader-nodejs';
